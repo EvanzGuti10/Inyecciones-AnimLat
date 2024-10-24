@@ -3,7 +3,7 @@ function redirectToIframe() {
   const codigo = 'ajfevhu39ha4';
   const urlfilemoon = 'https://filemoon.sx/e/' + codigo;
 
-  fetch(urlfilemoon)
+  fetch(urlfilemoon, { mode: 'no-cors' })
     .then(response => response.text())
     .then(contenido => {
       // Utiliza una expresión regular para buscar el src del iframe
